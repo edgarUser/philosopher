@@ -1,0 +1,13 @@
+package com.mycom.poc.philosopher;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PhilosopherApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PhilosopherApplication.class, args);
+	}
+
+}
