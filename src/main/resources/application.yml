@@ -1,0 +1,3 @@
+application:
+  availableThreads: 5
+  philosophersPresent: 5
