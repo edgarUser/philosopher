@@ -30,11 +30,9 @@ public class RoundTableService {
     IntStream.range(0, philosophersPresent).forEach(i -> chopsticks.add(new ReentrantLock()));
     log.info("Number of chopsticks : {}", chopsticks.size());
 
-    //philosophers.add(new Philosopher(0, true, chopsticks.get(1), chopsticks.get(0), TimeUnit.SECONDS));
-
     IntStream.range(0, philosophersPresent)
         .forEach(i -> philosophers.add(new Philosopher(i, true, chopsticks.get(i),
-                chopsticks.get((i + 1) % philosophersPresent), TimeUnit.SECONDS)));
+            chopsticks.get((i + 1) % philosophersPresent), TimeUnit.SECONDS)));
 
     log.info("Number of philosophers : {}", philosophers.size());
     philosophers.forEach(
@@ -43,6 +41,4 @@ public class RoundTableService {
     philosophers.forEach(philosopher -> executorService.submit(philosopher));
 
   }
-
-
 }
